@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTA VI (Early Access)</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d12;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 { color: #ff45a8; letter-spacing: 1px; }
+    p { color: #a0a0b5; }
+  </style>
+</head>
+<body>
+  <h1>GRAND THEFT AUTO VI</h1>
+  <p id="status">Verbinde mit Rockstar Games Social Club...</p>
+
+  <script type="module">
+    import { DiscordSDK } from "https://esm.sh";
+    const discordSdk = new DiscordSDK("1572643919999533248");
+
+    async function setup() {
+      await discordSdk.ready();
+      document.getElementById("status").innerText = "Verbunden • Vice City Freeroam (Build v0.9.4)";
+    }
+    setup();
+  </script>
+</body>
+</html>
